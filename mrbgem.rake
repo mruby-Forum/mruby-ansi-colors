@@ -1,4 +1,4 @@
-MRuby::Gem::Specification.new 'mruby-ansii-colors' do |spec|
+MRuby::Gem::Specification.new 'mruby-ansi-colors' do |spec|
   spec.license = "GPL-2.0"
   spec.author = "Ralph Desir(Mav7)"
   spec.version = "1.0.0"
