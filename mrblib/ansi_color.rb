@@ -1,5 +1,4 @@
 class String
-  attr_accessor :disable_colorization
   
   def color_codes
       {
