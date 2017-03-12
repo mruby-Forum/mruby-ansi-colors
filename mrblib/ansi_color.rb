@@ -1,5 +1,5 @@
 class String
-  
+
   def color_codes
       {
         black: 30,
@@ -13,7 +13,7 @@ class String
         bg_green: 42,
         yellow: 33,
         light_yellow: 93,
-        bg_yellow: 45,
+        bg_yellow: 43,
         blue: 34,
         light_blue: 94,
         bg_blue: 44,
