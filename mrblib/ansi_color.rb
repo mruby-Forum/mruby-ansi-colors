@@ -51,7 +51,7 @@ class String
         underline: 4, # Set underline mode
         blink: 5, # Set blink mode
         swap: 7, # Exchange foreground and background colors
-        hide:  8  # Hide text (foreground color would be the same as background)
+        hide: 8 # Hide text (foreground color would be the same as background)
       }
     end
 
@@ -59,7 +59,10 @@ class String
       mode_codes.keys
     end
 
-    def set_color(color, bg_color = :bg_default, mode = :default)
-      "\033[#{mode_codes[mode]};#{color_codes[color]};#{color_codes[bg_color]}m#{self}\033[0m"
+    def set_color(fg_color, bg_color = :bg_default, mode = :default)
+      fg_code = color_codes.fetch(fg_color, "38;5;#{fg_color}")
+      bg_code = color_codes.fetch(bg_color, "48;5:#{bg_color}")
+
+      "\033[#{mode_codes[mode]};#{fg_code};#{bg_code}m#{self}\033[0m"
     end
 end
