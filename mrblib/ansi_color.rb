@@ -60,8 +60,8 @@ class String
     end
 
     def set_color(fg_color, bg_color = :bg_default, mode = :default)
-      fg_code = color_codes.fetch(fg_color, "38;5;#{fg_color}")
-      bg_code = color_codes.fetch(bg_color, "48;5;#{bg_color}")
+      fg_code = color_codes[fg_color] || "38;5;#{fg_color}"
+      bg_code = color_codes[bg_color] || "48;5;#{bg_color}"
 
       "\033[#{mode_codes[mode]};#{fg_code};#{bg_code}m#{self}\033[0m"
     end
