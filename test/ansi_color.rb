@@ -39,6 +39,6 @@ assert('String#mode_codes') do
   assert_true mc.include? :bold
 end
 
-assert('Print Dog in every color') do
+assert('Print string in every color') do
   "".colors.each { |c| print ".".send(c)}
 end
