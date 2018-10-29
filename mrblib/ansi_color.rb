@@ -65,4 +65,10 @@ class String
 
       "\033[#{mode_codes[mode]};#{fg_code};#{bg_code}m#{self}\033[0m"
     end
+
+    alias_method(:color, :set_color)
+
+    "".colors.each do |c|
+      define_method(c) { self.color(c) }
+    end
 end

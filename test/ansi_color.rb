@@ -16,6 +16,7 @@ end
 
 assert('String#set_color') do
   assert_equal "\e[0;31;49mBasquiat\e[0m", "Basquiat".set_color(:red)
+  assert_equal "\e[0;31;49mBasquiat\e[0m", "Basquiat".color(:red)
 end
 
 assert('String#color_codes') do
@@ -36,4 +37,8 @@ end
 assert('String#mode_codes') do
   mc = "".mode_codes
   assert_true mc.include? :bold
+end
+
+assert('Print string in every color') do
+  "".colors.each { |c| print ".".send(c)}
 end
