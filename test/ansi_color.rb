@@ -16,6 +16,7 @@ end
 
 assert('String#set_color') do
   assert_equal "\e[0;31;49mBasquiat\e[0m", "Basquiat".set_color(:red)
+  assert_equal "\e[0;31;49mBasquiat\e[0m", "Basquiat".color(:red)
 end
 
 assert('String#color_codes') do
