@@ -5,4 +5,5 @@ MRuby::Gem::Specification.new 'mruby-ansi-colors' do |spec|
   spec.summary = 'Extends String class to use ANSI color escape codes.'
 
   spec.add_dependency 'mruby-print', core: 'mruby-print'
+  spec.add_test_dependency 'mruby-metaprog', core: 'mruby-metaprog'
 end
