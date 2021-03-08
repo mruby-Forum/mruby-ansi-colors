@@ -40,5 +40,5 @@ assert('String#mode_codes') do
 end
 
 assert('Print string in every color') do
-  "".colors.each { |c| print ".".send(c)}
+  "".colors.each { |c| print ".".__send__(c)}
 end
